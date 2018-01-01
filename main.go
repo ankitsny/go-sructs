@@ -19,6 +19,10 @@ func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
+func (pPtr *person) updateName(uName string) {
+	(*pPtr).firstName = uName
+}
+
 func main() {
 	// Method #1
 	user1 := person{"Virat", "Kohli", contactInfo{"ankit@email.com", 123}}
@@ -41,6 +45,7 @@ func main() {
 	user3.contact.email = "ankso@ankso.com"
 	user3.contact.zipCode = 12322
 
+	(&user1).updateName("ANKSO")
 	user1.print()
 	user2.print()
 	user3.print()
