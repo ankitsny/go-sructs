@@ -45,8 +45,14 @@ func main() {
 	user3.contact.email = "ankso@ankso.com"
 	user3.contact.zipCode = 12322
 
+	// Method #1
 	(&user1).updateName("ANKSO")
 	user1.print()
+
+	// Method #2 - Shortcut
+	// Automatic type conversion
+	user2.updateName("HelloName")
+
 	user2.print()
 	user3.print()
 }
