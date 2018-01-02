@@ -55,4 +55,7 @@ func main() {
 
 	user2.print()
 	user3.print()
+
+	fmt.Println("\n\n\n________________________________________")
+	mapsExample()
 }
